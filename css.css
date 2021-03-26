@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.app{
+    position: relative;
+    background-color: brown;
+}
+.btn-c{
+    position: absolute;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn{
+    font-size: 3rem;
+    /* position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%); */
+}
+
+.btn-2{
+    font-size: 3rem;
+    /* position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(0%,-50%); */
+}
+.slide{
+    position: relative;
+}
+
+.slide-title {
+    font-size: 3rem;
+    position: absolute;
+    color: cornsilk;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+}
+
+.slide-img {
+    display: block;
+   object-fit: contain;
+    min-width: 100%;
+   
+}

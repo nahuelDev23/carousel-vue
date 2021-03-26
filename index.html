@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/vue-agile/dist/VueAgile.css">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="app" id="app">
+        <agile  :options="myOptions" ref="carousel">
+            <div class="slide">
+                <h3 class="slide-title">Como almendra y vos pobre?</h3>
+                <img class="slide-img" src="https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img class="slide-img" src="https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg" alt="">
+            </div>
+            
+        </agile>
+        <div class='btn-c'> 
+            <span class='btn' @click="$refs.carousel.goToNext()">next</span>
+            <span class='btn-2' @click="$refs.carousel.goToPrev()">prev</span>
+        </div>
+       
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <script src="https://unpkg.com/vue-agile"></script>
+    <script type="module">
+        var app = new Vue({
+            el: '#app',
+            components: {
+                agile: VueAgile,
+            },
+            data(){
+                return {
+        myOptions: {
+            navButtons: false,
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        dots: false,
+                        infinite: true
+                    }
+                },
+                
+                {
+                    breakpoint: 900,
+                    settings: {
+                        navButtons: false,
+                        dots: false,
+                        infinite: true
+                    }
+                }
+            ]
+        }
+    }
+}
+        })
+    </script>
+</body>
+
+</html>

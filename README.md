@@ -1,0 +1,1 @@
+https://github.com/lukaszflorczak/vue-agile#installation
